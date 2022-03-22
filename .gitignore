@@ -1,0 +1,37 @@
+# Data
+data
+data_bak/*
+sockeye/out/*
+
+# Figures
+figures/*
+
+#Notebook checkpoints
+**/.ipynb_checkpoints
+
+# IDE files
+.idea/
+
+# pycache
+**/__pycache__/
+
+# Laura's misc. data generation files
+scripts/generate-PCA-and-X-npys.ipynb
+scripts/umap-cpu-rerun-1milB-100kC.ipynb
+
+# Anton's misc analysis outputs/folders
+scripts/other-method-simulations/polonies/results_polonies/
+scripts/parameter-sweeps/figs_out/
+scripts/umap-tests/*.pdf
+scripts/parameter-sweeps/*.pdf
+scripts/parameter-sweeps/*.png
+scripts/parameter-estimation/*.png
+scripts/parameter-estimation/*.pdf
+scripts/scalable_reconstruction/compute_canada/distributed/patches_out/
+scripts/scalable_reconstruction/sweep_out/
+
+# Figures for unit testing
+scripts/functions/*.png
+
+# Output files
+out/
