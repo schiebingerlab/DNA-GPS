@@ -5,6 +5,7 @@ import numpy as np
 import math
 from colormap import rgb2hex
 from colorutils import Color
+from matplotlib import pyplot as plt
 
 # Given vectors of x and y coordinates returns a color gradient where x ranges over
 # red and y ranges over red, resulting in colors from black to purple.
