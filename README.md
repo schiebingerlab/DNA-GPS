@@ -1,14 +1,16 @@
 # GPS-seq: A theoretical framework for large-scale optics-free spatial transcriptomics
 ![Reconstructions](https://github.com/schiebingerlab/GPS-seq/blob/master/aux_files/header.png)
 
-GPS-seq is a theoretical for large-scale optics-free transcriptomics at the cellular level that combines high-throughput sequencing with manifold learning. Similar to technologies like Slide-seq [1] and 10X Visium [2], tissue samples are stamped on a surface of DNA-barcoded "anchors", such as spots or beads. Instead of relying on depositing known barcodes to each location or retrospectively identifying barcodes through imaging, our approach localizes beads through the use of "satellite" barcodes (sBCs). sBCs diffuse locally resulting in each bead having a sBC transcriptome that is determined by their spatial position. We show that the transcriptome profiles of the anchors form 2D manifold in the high dimensional sBC space, which can be recovered using manifold learning methods to reconstruct the original spatial structure of the anchors. Our simulations show that beads can be localized to within 10-30 $\mu m$ of their ground truth positions, depending on sequencing depth. For further details, see our [preprint](https://www.biorxiv.org/content/10.1101/2022.03.22.485380v2).
+GPS-seq is a theoretical framework for large-scale optics-free transcriptomics that combines high-throughput sequencing with manifold learning. Similar to technologies like Slide-seq [1] and 10X Visium [2], tissue samples are stamped on a surface of DNA-barcoded "anchors", such as spots or beads. Instead of relying on depositing known barcodes to each location or retrospectively identifying barcodes through imaging, our approach localizes beads through the use of "satellite" barcodes (sBCs). sBCs diffuse locally resulting in each bead having a sBC transcriptome that is determined by its spatial position. We show that the transcriptome profiles of the anchors form a 2D manifold in the high dimensional sBC space, which can be recovered using manifold learning methods. Our simulations show that beads can be localized to within 10-30 $\mu m$ of their ground truth positions, depending on sequencing depth. For further details, see our [preprint](https://www.biorxiv.org/content/10.1101/2022.03.22.485380v2).
 
 
 Here we provide a walk-through of the data simulation and reconstruction process, as well as provide precomputed data allowing you to recreate the sweep figures from the preprint. Each notebook can be run individually or they can be run in series to progress from data generation to a summary of what spatial resolution can be achieved across a wide range of parameters.
 
 ### Citing
 Please cite the [preprint](https://www.biorxiv.org/content/10.1101/2022.03.22.485380v2).
+
 The DNA-based global positioning system — a theoretical framework for large-scale spatial genomics
+
 Laura Greenstreet, Anton Afanassiev, Yusuke Kijima, Matthieu Heitz, Soh Ishiguro, Samuel King, Nozomu Yachie, Geoffrey Schiebinger
 
 ### References
