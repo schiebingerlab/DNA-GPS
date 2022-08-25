@@ -1,5 +1,5 @@
 # GPS-seq: A theoretical framework for large-scale optics-free spatial transcriptomics
-![Reconstructions](https://github.com/schiebingerlab/GPS-seq/blob/main/aux_files/header.png)
+![Reconstructions](https://github.com/schiebingerlab/GPS-seq/blob/master/aux_files/header.png)
 
 GPS-seq is a theoretical for large-scale optics-free transcriptomics at the cellular level that combines high-throughput sequencing with manifold learning. Similar to technologies like Slide-seq [1] and 10X Visium [2], tissue samples are stamped on a surface of DNA-barcoded "anchors", such as spots or beads. Instead of relying on depositing known barcodes to each location or retrospectively identifying barcodes through imaging, our approach localizes beads through the use of "satellite" barcodes (sBCs). sBCs diffuse locally resulting in each bead having a sBC transcriptome that is determined by their spatial position. We show that the transcriptome profiles of the anchors form 2D manifold in the high dimensional sBC space, which can be recovered using manifold learning methods to reconstruct the original spatial structure of the anchors. Our simulations show that beads can be localized to within 10-30 $\mu m$ of their ground truth positions, depending on sequencing depth. For further details, see our [preprint](https://www.biorxiv.org/content/10.1101/2022.03.22.485380v2).
 
