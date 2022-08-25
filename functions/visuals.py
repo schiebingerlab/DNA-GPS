@@ -172,3 +172,18 @@ def complementary_cummulative_distribution(dist_gt, max_dist):
     plt.axhline(0.1, c='k', linestyle='dashed', linewidth=0.5, zorder=0)
     plt.axhline(0.5, c='k', linestyle='dashed', linewidth=0.5, zorder=0)
     plt.show()
+
+# Given a dictionary of umaps and a set of keys calculates the bins and proportions
+# for the complementary cummulative distribution plot
+def compute_bins(umaps, keys, step_um=10, max_dist_um=140):
+    bins = {}
+    vals = {}
+
+    for key in keys:
+        bins[key] = np.arange(0, max_dist_um, step_um)
+        bins[key] = np.append(bins[key], max(max(umaps[key][:,2]), max_dist_um))
+        hist = np.histogram(umaps[key][:,2], bins=bins[key])
+        vals[key] = np.cumsum(hist[0]/umaps[key].shape[0])
+        vals[key] = np.insert(vals[key],0,0)
+
+    return bins, vals
