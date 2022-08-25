@@ -55,10 +55,20 @@ def rigid_registration(P, Q, allow_flip=True):
 
 
 # Registers UMAP coordinates to the GT coordinates, and compute distances to the GT.
-def align(umap_coords, spatial_coords, rel_scale=None):
+def align(umap_coords, spatial_coords, rel_scale=1):
+    # Normalize and center the spatial coords in [0,1]^2
+    # if normalize == True:
+    #     xrange = max(spatial_coords[:,0]) - min(spatial_coords[:,0])
+    #     yrange = max(spatial_coords[:,1]) - min(spatial_coords[:,1])
+    #
+    #     xbuff = max(0, yrange - xrange)/2
+    #     ybuff = max(0, xrange - yrange)/2
+    #
+    #     spatial_coords[:,0] = (spatial_coords[:,0] - min(spatial_coords[:,0]) + xbuff) / max(xrange, yrange)
+    #     spatial_coords[:,1] = (spatial_coords[:,1] - min(spatial_coords[:,1]) + ybuff) / max(xrange, yrange)
+
     reg_umap, transform = rigid_registration(umap_coords, spatial_coords)
-    if rel_scale is not None:
-        distances = np.sqrt(((spatial_coords - reg_umap)**2).sum(1))/rel_scale
-    else:
-        distances = np.sqrt(((spatial_coords - reg_umap)**2).sum(1))
+
+    distances = np.sqrt(((spatial_coords - reg_umap)**2).sum(1))/rel_scale
+
     return distances, reg_umap, transform
