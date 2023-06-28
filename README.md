@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/472558505.svg)](https://zenodo.org/badge/latestdoi/472558505)
+
 # DNA-GPS: A theoretical framework for large-scale optics-free spatial transcriptomics
 ![Reconstructions](https://github.com/schiebingerlab/GPS-seq/blob/master/aux_files/header.png)
 
